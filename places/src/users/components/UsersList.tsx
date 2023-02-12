@@ -1,10 +1,13 @@
+import Card from "../../shared/components/UI/Card";
 import { Users } from "../../types/types";
 import UserItem from "./UserItem";
 
 const UsersList = ({ users }: Users) => {
   if (users.length === 0) {
     return (
-      <h2 className="w-max mx-auto text-lg font-medium">No users found</h2>
+      <Card>
+        <h2 className="w-max mx-auto text-lg font-medium">No users found</h2>
+      </Card>
     );
   }
   return (

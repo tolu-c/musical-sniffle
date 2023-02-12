@@ -15,6 +15,10 @@ export interface AvatarProps {
   alt: string;
 }
 
-export interface CardProps {
+export interface ChildrenProps {
   children: ReactNode;
+}
+
+export interface SideBarProps {
+  onClose: () => void;
 }
