@@ -8,7 +8,7 @@ const UsersList = ({ users }: Users) => {
     );
   }
   return (
-    <ul>
+    <ul className="p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {users.map((user) => (
         <UserItem
           key={user.id}
