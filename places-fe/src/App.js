@@ -7,6 +7,7 @@ import {
 import Users from "./user/pages/Users";
 import Places from "./places/pages/Places";
 import NewPlace from "./places/pages/NewPlace";
+import "./index.css";
 
 const App = () => {
   return (

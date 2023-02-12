@@ -12,6 +12,8 @@ const UsersList = ({ items }) => {
     );
   }
 
+  console.log({ items });
+
   return (
     <ul>
       {items.map((item) => (
