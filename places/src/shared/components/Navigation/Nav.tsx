@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Menu from "../../../assets/icons/Menu";
 import Header from "./Header";
 import SideBar from "./SideBar";
+import NavLinks from "./NavLinks";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,7 +20,9 @@ const Nav = () => {
           }}
         />
       )}
-      <nav className="hidden lg:flex gap-x-4">links</nav>
+      <nav className="hidden lg:flex gap-x-4">
+        <NavLinks />
+      </nav>
       <div
         onClick={() => {
           setIsOpen(true);
