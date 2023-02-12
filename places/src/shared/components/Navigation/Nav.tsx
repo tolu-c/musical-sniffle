@@ -29,7 +29,7 @@ const Nav = () => {
         }}
         className="lg:hidden text-white"
       >
-        <Menu />
+        <Menu size="24" />
       </div>
     </Header>
   );

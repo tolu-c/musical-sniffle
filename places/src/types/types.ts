@@ -22,3 +22,8 @@ export interface ChildrenProps {
 export interface SideBarProps {
   onClose: () => void;
 }
+
+export interface IconProps {
+  size: string;
+  onClick?: () => void;
+}
