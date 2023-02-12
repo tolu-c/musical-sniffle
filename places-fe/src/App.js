@@ -13,10 +13,12 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Users />} />
+        {/* places */}
         <Route path="places">
           <Route index element={<Places />} />
           <Route path="new" element={<NewPlace />} />
         </Route>
+        {/* alternative to 404 */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
