@@ -12,10 +12,12 @@ export default function App() {
       <main className="mt-4">
         <Routes>
           <Route path="/" element={<Users />} />
-          <Route path="places">
+          <Route path=":userID/places" element={<Places />} />
+          <Route path="places/new" element={<NewPlace />} />
+          {/* <Route path=":userID/places">
             <Route index element={<Places />} />
             <Route path="new" element={<NewPlace />} />
-          </Route>
+          </Route> */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

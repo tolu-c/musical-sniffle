@@ -27,3 +27,20 @@ export interface IconProps {
   size: string;
   onClick?: () => void;
 }
+
+export interface Place {
+  placeID: string;
+  address: string;
+  userID: string;
+  imageUrl: string;
+  title: string;
+  description: string;
+  location: {
+    lat: number;
+    lng: number;
+  };
+}
+
+export interface Places {
+  places: Place[];
+}

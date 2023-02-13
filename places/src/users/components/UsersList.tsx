@@ -1,5 +1,5 @@
 import Card from "../../shared/components/UI/Card";
-import { Users } from "../../types/types";
+import { User, Users } from "../../types/types";
 import UserItem from "./UserItem";
 
 const UsersList = ({ users }: Users) => {
@@ -12,7 +12,7 @@ const UsersList = ({ users }: Users) => {
   }
   return (
     <ul className="p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-      {users.map((user) => (
+      {users.map((user: User) => (
         <UserItem
           key={user.id}
           id={user.id}
