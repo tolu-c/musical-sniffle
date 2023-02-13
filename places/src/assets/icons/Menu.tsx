@@ -1,8 +1,6 @@
 import { IconProps } from "../../types/types";
 
 const Menu = ({ size, onClick }: IconProps) => {
-  console.log(`w-${size} h-${size}`);
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

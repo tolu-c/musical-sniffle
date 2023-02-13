@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 const SideBar = ({ onClose }: SideBarProps) => {
   const content: ReactNode = (
     <div
-      className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50"
+      className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50 animation-side"
       onClick={onClose}
     >
       <div className="flex flex-col lg:hidden absolute top-0 right-0 h-screen w-3/4 md:w-1/2 bg-teal-900">
