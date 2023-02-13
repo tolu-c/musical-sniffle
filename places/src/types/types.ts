@@ -44,3 +44,13 @@ export interface Place {
 export interface Places {
   places: Place[];
 }
+
+export interface ButtonProps {
+  href?: string;
+  to?: string;
+  size?: "small" | "large" | "normal";
+  onClick?: () => void;
+  children: ReactNode;
+  buttonStyle?: "primary" | "danger" | "success";
+  disabled?: boolean;
+}

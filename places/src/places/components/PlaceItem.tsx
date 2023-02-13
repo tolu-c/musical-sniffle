@@ -1,4 +1,5 @@
 import Card from "../../shared/components/UI/Card";
+import Button from "../../shared/components/UI/FormElements/Button";
 import { Place } from "../../types/types";
 
 const PlaceItem = ({
@@ -16,15 +17,21 @@ const PlaceItem = ({
         <div>
           <img src={imageUrl} alt={title} title={title} />
         </div>
-        <div>
+        <div className="flex flex-col gap-y-1.5 items-center">
           <h2>{title}</h2>
           <h3>{address}</h3>
           <p>{description}</p>
         </div>
-        <div>
-          <button type="button">View on map</button>
-          <button type="button">Edit</button>
-          <button type="button">Delete</button>
+        <div className="w-full flex justify-evenly items-center">
+          <Button size="normal" buttonStyle="primary">
+            View on map
+          </Button>
+          <Button to={`edit`} size="normal" buttonStyle="primary">
+            Edit
+          </Button>
+          <Button buttonStyle="danger" size="normal">
+            Delete
+          </Button>
         </div>
       </Card>
     </li>
