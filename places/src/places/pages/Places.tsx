@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import { Place } from "../../types/types";
 import PlaceList from "../components/PlaceList";
 
@@ -17,7 +18,7 @@ const PLACES: Place[] = [
   },
   {
     placeID: "p2",
-    title: "University of Ibadan",
+    title: "University of Lagos",
     description: "Premiere university in West Africa",
     imageUrl:
       "https://i1.wp.com/www.vanguardngr.com/wp-content/uploads/2020/01/University-of-Ibadan.jpg?fit=1600%2C1066&ssl=1",
@@ -31,7 +32,12 @@ const PLACES: Place[] = [
 ];
 
 const Places = () => {
-  return <PlaceList places={PLACES} />;
+  const { userID } = useParams();
+  const loadedPlaces: Place[] = PLACES.filter(
+    (place: Place) => place.userID === userID
+  );
+
+  return <PlaceList places={loadedPlaces} />;
 };
 
 export default Places;
