@@ -54,3 +54,9 @@ export interface ButtonProps {
   buttonStyle?: "primary" | "danger" | "success";
   disabled?: boolean;
 }
+
+export interface ModalProps {}
+
+export interface ModalOverlayProps {
+  extraClasses?: string;
+}

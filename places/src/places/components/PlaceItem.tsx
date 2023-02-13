@@ -26,7 +26,7 @@ const PlaceItem = ({
           <Button size="normal" buttonStyle="primary">
             View on map
           </Button>
-          <Button to={`edit`} size="normal" buttonStyle="primary">
+          <Button to={`/places/${placeID}`} size="normal" buttonStyle="primary">
             Edit
           </Button>
           <Button buttonStyle="danger" size="normal">
