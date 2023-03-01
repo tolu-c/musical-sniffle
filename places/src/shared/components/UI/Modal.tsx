@@ -31,7 +31,9 @@ const ModalOverlay = (
 const Modal = () => {
   return (
     <Fragment>
-      <div className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50"></div>
+      <div className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50">
+        hello
+      </div>
     </Fragment>
   );
 };
