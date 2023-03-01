@@ -1,15 +1,27 @@
 import { createPortal } from "react-dom";
-import { ModalOverlayProps } from "../../../types/types";
+import { ModalOverlayProps, ModalProps } from "../../../types/types";
+import { FormEvent, Fragment } from "react";
 
-const ModalOverlay = ({ extraClasses }: ModalOverlayProps) => {
+const ModalOverlay = (
+  { extraClasses }: ModalOverlayProps,
+  { header, onSubmit, children, footerContent }: ModalProps
+) => {
+  const submitHandler = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (onSubmit) {
+      onSubmit;
+    }
+  };
+
   const content = (
-    <div
-      className={`${extraClasses} w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50`}
-    >
+    <div className={`${extraClasses}`}>
       <header>
-        <h2></h2>
+        <h2>{header}</h2>
       </header>
-      <form></form>
+      <form onSubmit={submitHandler}>
+        <div>{children}</div>
+        <footer>{footerContent}</footer>
+      </form>
     </div>
   );
 
@@ -17,7 +29,11 @@ const ModalOverlay = ({ extraClasses }: ModalOverlayProps) => {
 };
 
 const Modal = () => {
-  return <div>Modal</div>;
+  return (
+    <Fragment>
+      <div className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50"></div>
+    </Fragment>
+  );
 };
 
 export default Modal;

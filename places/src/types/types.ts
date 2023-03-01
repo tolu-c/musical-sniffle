@@ -55,7 +55,12 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-export interface ModalProps {}
+export interface ModalProps {
+  header: string;
+  onSubmit: () => void;
+  children: ReactNode;
+  footerContent: ReactNode;
+}
 
 export interface ModalOverlayProps {
   extraClasses?: string;
