@@ -1,5 +1,11 @@
+import Input from "../../shared/components/UI/FormElements/Input";
+
 const NewPlace = () => {
-  return <div>NewPlace</div>;
+  return (
+    <form>
+      <Input type="text" label="title" element="input" id="title" />
+    </form>
+  );
 };
 
 export default NewPlace;
