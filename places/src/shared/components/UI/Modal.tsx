@@ -1,10 +1,17 @@
 import { createPortal } from "react-dom";
-import { ModalOverlayProps, ModalProps } from "../../../types/types";
+import { ModalProps } from "../../../types/types";
 import { FormEvent, Fragment } from "react";
 
-const ModalOverlay = (
-  { extraClasses }: ModalOverlayProps,
-  { header, onSubmit, children, footerContent }: ModalProps
+const Modal = (
+  {
+    onClose,
+    extraClasses,
+    header,
+    onSubmit,
+    children,
+    footerContent,
+  }: ModalProps,
+  props: any
 ) => {
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -14,28 +21,25 @@ const ModalOverlay = (
   };
 
   const content = (
-    <div className={`${extraClasses}`}>
-      <header>
-        <h2>{header}</h2>
-      </header>
-      <form onSubmit={submitHandler}>
-        <div>{children}</div>
-        <footer>{footerContent}</footer>
-      </form>
-    </div>
-  );
-
-  return createPortal(content, document.getElementById("modal") as HTMLElement);
-};
-
-const Modal = () => {
-  return (
     <Fragment>
-      <div className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50">
-        this is a modal component
+      <div
+        className="w-full h-screen bg-teal-900/40 absolute top-0 right-0 z-50"
+        onClick={onClose}
+      >
+        <div className={`${extraClasses}`}>
+          <header>
+            <h2>{header}</h2>
+          </header>
+          <form onSubmit={submitHandler}>
+            <div>{children}</div>
+            <footer>{footerContent}</footer>
+          </form>
+        </div>
       </div>
     </Fragment>
   );
+
+  return createPortal(content, document.getElementById("modal") as HTMLElement);
 };
 
 export default Modal;

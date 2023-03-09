@@ -56,12 +56,10 @@ export interface ButtonProps {
 }
 
 export interface ModalProps {
+  onClose: () => void;
+  extraClasses?: string;
   header: string;
   onSubmit: () => void;
   children: ReactNode;
   footerContent: ReactNode;
-}
-
-export interface ModalOverlayProps {
-  extraClasses?: string;
 }
