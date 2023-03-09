@@ -7,7 +7,7 @@ export interface InputProps {
 
 const Input = ({ id, type, label, element }: InputProps) => {
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-2 w-full">
       <label htmlFor={id} className="capitalize">
         {label}
       </label>
