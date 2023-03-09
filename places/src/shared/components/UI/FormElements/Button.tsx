@@ -22,12 +22,12 @@ const Button = ({
 
   const buttonSize = `${
     size === "normal"
-      ? "w-max h-auto py-2 px-4 rounded-md text-base"
+      ? "w-max h-auto py-2 px-4 rounded-md text-base font-medium"
       : size === "small"
-      ? "w-max h-auto py-1 px-2 rounded-md text-sm"
+      ? "w-max h-auto py-1 px-2 rounded-md text-sm font-medium"
       : size === "large"
-      ? "w-max h-auto py-3 px-6 rounded-lg text-lg"
-      : "w-max h-auto py-2 px-4 rounded-md text-base"
+      ? "w-max h-auto py-3 px-6 rounded-lg text-lg font-medium"
+      : "w-max h-auto py-2 px-4 rounded-md text-base font-medium"
   }`;
 
   if (href) {

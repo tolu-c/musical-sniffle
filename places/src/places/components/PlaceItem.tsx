@@ -25,14 +25,18 @@ const PlaceItem = ({
           onClose={closeMapHandler}
           header={address}
           onSubmit={() => {}}
-          footerContent={<Button onClick={closeMapHandler}>close</Button>}
+          footerContent={
+            <Button onClick={closeMapHandler} buttonStyle="danger" size="small">
+              Close
+            </Button>
+          }
         >
-          <div className="w-full h-20">
+          <div className="w-full">
             <h2>the map</h2>
           </div>
         </Modal>
       )}
-      <li>
+      <li className="w-full">
         <Card>
           <div>
             <img src={imageUrl} alt={title} title={title} />

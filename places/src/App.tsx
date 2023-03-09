@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Router>
       <Nav />
-      <main className="mt-4">
+      <main className="mt-4 p-4 md:p-5 lg:p-6">
         <Routes>
           <Route path="/" element={<Users />} />
           <Route path=":userID/places" element={<Places />} />
