@@ -12,11 +12,11 @@ const Button = ({
 }: ButtonProps) => {
   const buttonColor = `${
     buttonStyle === "danger"
-      ? "bg-red-600 text-red-100"
+      ? "bg-red-600 hover:bg-red-700 text-red-100"
       : buttonStyle === "primary"
-      ? "bg-blue-700 text-blue-100"
+      ? "bg-blue-700 hover:bg-blue-800  text-blue-100"
       : buttonStyle === "success"
-      ? "bg-green-700 text-green-100"
+      ? "bg-green-700 hover:bg-green-800  text-green-100"
       : "bg-transparent border"
   }`;
 
